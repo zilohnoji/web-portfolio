@@ -1,19 +1,13 @@
 main {
   padding-top: 9rem;
-  height: 23rem;
-  background: url("/assets/images/apresentacao.png") no-repeat left top;
+  height: 50vh;
+  background: url("/assets/images/apresentacao.png") no-repeat center bottom;
   background-size: cover;
 
   & .introducao {
     & .introducao-icones {
       padding: 1.5rem 0rem;
     }
-  }
-}
-
-@media (max-width: 650px) {
-  main {
-    background: url("/assets/images/apresentacao.png") no-repeat center top;
   }
 }
 
