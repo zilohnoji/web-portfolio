@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+header {
+  position: fixed;
+  width: 100%;
+}
+header .header #btn-mobile {
+  background: none;
+  display: none;
+}
+header .header #btn-mobile::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  display: block;
+  background: url("./assets/icons/menu-hamburguer.svg") no-repeat center;
+}
+header .header .header-menu li {
+  position: relative;
+}
+header .header .header-menu li::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--linear-gradient-yellow);
+  transition: 0.3s;
+}
+header .header .header-menu li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 875px) {
+  header .header #header-container-nav #btn-mobile {
+    display: block;
+  }
+  header .header #header-container-nav.active .header-menu {
+    height: 100vh;
+    visibility: visible;
+  }
+  header .header #header-container-nav .header-menu {
+    transition: 0.3s ease-in-out;
+    display: block;
+    position: absolute;
+    overflow-y: auto;
+    width: 100%;
+    height: 0;
+    right: 0;
+    top: 100px;
+    background-color: var(--primary-color-c13);
+  }
+  header .header #header-container-nav .header-menu li {
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid var(--primary-color-c11);
+    position: relative;
+  }
+  header .header #header-container-nav .header-menu li:hover::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 4px;
+    background: var(--linear-gradient-yellow);
+  }
+  header .header #header-container-nav .header-menu li::after {
+    display: none;
+  }
+}
+main {
+  padding-top: 9rem;
+  height: 23rem;
+  background: url("/assets/images/apresentacao.png") no-repeat left top;
+  background-size: cover;
+}
+main .introducao .introducao-icones {
+  padding: 1.5rem 0rem;
+}
+
+@media (max-width: 650px) {
+  main {
+    background: url("/assets/images/apresentacao.png") no-repeat center top;
+  }
+}
+@media (max-width: 430px) {
+  main .introducao > h1 {
+    font-size: 3rem;
+  }
+  main .introducao > span {
+    font-size: 1.3rem;
+  }
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-roboto {
+  font-family: var(--font-roboto);
+}
+
+.font-nunito {
+  font-family: var(--font-nunito);
+}
+
+.fs-30-px {
+  font-size: 1.87rem;
+}
+
+.ps-20-px {
+  font-size: 1.25rem;
+}
+
+.fs-25-px {
+  font-size: 1.56rem;
+}
+
+.fs-35-px {
+  font-size: 2.18rem;
+}
+
+.fs-18-px {
+  font-size: 1.12rem;
+}
+
+.fs-60-px {
+  font-size: 3.75rem;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-10-px {
+  gap: 0.62rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-unstyled {
+  text-decoration: none;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+.primary-color-c0 {
+  color: var(--primary-color-c0);
+}
+
+.primary-color-c4 {
+  color: var(--primary-color-c4);
+}
+
+.primary-color-c6 {
+  color: var(--primary-color-c6);
+}
+
+.btn-padding-0-2 {
+  padding: 0.5rem 2rem;
+}
+
+.btn-padding-0-1 {
+  padding: 0.5rem 1rem;
+}
+
+.primary-color-c1 {
+  color: var(--primary-color-c1);
+}
+
+.secondary-color-e8 {
+  color: var(--secondary-color-e8);
+}
+
+.secondary-color-e12 {
+  color: var(--secondary-color-e12);
+}
+
+.bg-primary-color-c13 {
+  background-color: var(--primary-color-c13);
+}
+
+.bg-btn-cv {
+  background: rgba(135, 30, 30, 0.3);
+}
+
+.bg-btn-cv:hover {
+  background: rgba(135, 30, 30, 0.5);
+}
+
+.default-width {
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.linear-gradient-red {
+  background: var(--linear-gradient-red);
+}
+
+.linear-gradient-red-hover:hover {
+  background: var(--linear-gradient-red-hover);
+}
+
+.btn {
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--font-poppins);
+  border: 1px solid var(--secondary-color-e7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Roboto";
+}
+
+body {
+  position: relative;
+}
+
+body:nth-child(odd) {
+  background-color: var(--primary-color-c12);
+}
+
+body:nth-child(even) {
+  background-color: var(--primary-color-c13);
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --font-roboto: "Roboto";
+  --font-poppins: "Poppins";
+  --font-nunito: "Nunito";
+  --primary-color-c0: #ffffff;
+  --primary-color-c1: #f5f5f5;
+  --primary-color-c2: #e0e0e0;
+  --primary-color-c3: #cccccc;
+  --primary-color-c4: #b8b8b8;
+  --primary-color-c5: #a3a3a3;
+  --primary-color-c6: #8f8f8f;
+  --primary-color-c7: #7a7a7a;
+  --primary-color-c8: #666666;
+  --primary-color-c9: #525252;
+  --primary-color-c10: #3d3d3d;
+  --primary-color-c11: #292929;
+  --primary-color-c12: #141313;
+  --primary-color-c13: #141414;
+  --secondary-color-e0: #fa987a;
+  --secondary-color-e1: #fa897a;
+  --secondary-color-e2: #fa7a7a;
+  --secondary-color-e3: #d96565;
+  --secondary-color-e4: #c25555;
+  --secondary-color-e5: #ae4242;
+  --secondary-color-e6: #982f2f;
+  --secondary-color-e7: #871e1e;
+  --secondary-color-e8: #f44336;
+  --secondary-color-e9: #7a1111;
+  --secondary-color-e10: #5c0c0c;
+  --secondary-color-e11: #350000;
+  --secondary-color-e12: #210000;
+  --linear-gradient-red: linear-gradient(
+    to bottom,
+    var(--secondary-color-e8),
+    #92170e
+  );
+  --linear-gradient-red-hover: linear-gradient(
+    to bottom,
+    var(--secondary-color-e8),
+    #ca2115
+  );
+  --linear-gradient-yellow: linear-gradient(
+    to right,
+    var(--secondary-color-e8),
+    var(--secondary-color-e9)
+  );
+}/*# sourceMappingURL=index.css.map */
