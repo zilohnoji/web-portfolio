@@ -9,6 +9,9 @@ header .header > h2 a:hover span {
   transition: 0.3s ease-in-out;
   color: #fff;
 }
+header .header .header-menu {
+  z-index: 2;
+}
 header .header .header-menu li {
   position: relative;
 }
@@ -81,24 +84,13 @@ main {
   background: url("/assets/images/apresentacao.png") no-repeat left top;
   background-size: cover;
 }
-main .introducao .text-animated span {
-  position: relative;
-  transition: 0.5s;
-}
-main .introducao .text-animated span::after {
-  content: "";
-  height: 100%;
-  width: calc(100% + 5px);
-  right: -5px;
-  position: absolute;
-  animation: cursor-animation 0.8s infinite ease-in-out, word-digit-animation 20s steps(20) infinite;
-  border-left: 2px solid var(--secondary-color-e8);
-  background: #000;
-}
-main .introducao .text-animated span::before {
-  content: "";
-  display: inline-block;
-  animation: word-animation 20s infinite;
+main .introducao .text-animation {
+  width: 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--secondary-color-e8);
+  animation: mark 0.8s step-end infinite, write 6s steps(22, end) infinite;
 }
 main .introducao .introducao-icones {
   padding: 1.5rem 0rem;
@@ -117,34 +109,23 @@ main .introducao .introducao-icones {
     font-size: 2.7rem;
   }
 }
-@keyframes word-digit-animation {
-  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+@keyframes mark {
+  50% {
+    border-right-color: transparent;
+  }
+}
+@keyframes write {
+  20% {
+    width: 21.5ch;
+  }
+  70% {
+    width: 21.5ch;
+  }
+  85% {
     width: 0;
   }
-  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
-    width: calc(100% + 5px);
-  }
-}
-@keyframes cursor-animation {
-  0% {
-    border-left: 2px solid #000;
-  }
-}
-@keyframes word-animation {
-  0%, 20% {
-    content: "Desenvolvedor de Software";
-  }
-  21%, 40% {
-    content: "Programador Full-Stack";
-  }
-  41%, 60% {
-    content: "Design de interfaces";
-  }
-  61%, 80% {
-    content: "Desenvolvedor Java Spring";
-  }
-  81%, 100% {
-    content: "Desenvolvedor Web";
+  100% {
+    width: 0;
   }
 }
 #sobre-mim {
