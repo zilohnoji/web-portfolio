@@ -5,16 +5,9 @@ header {
   position: fixed;
   width: 100%;
 }
-header .header #btn-mobile {
-  background: none;
-  display: none;
-}
-header .header #btn-mobile::after {
-  content: "";
-  height: 30px;
-  width: 30px;
-  display: block;
-  background: url("./assets/icons/menu-hamburguer.svg") no-repeat center;
+header .header > h2 a:hover span {
+  transition: 0.3s ease-in-out;
+  color: #fff;
 }
 header .header .header-menu li {
   position: relative;
@@ -31,6 +24,17 @@ header .header .header-menu li::after {
 }
 header .header .header-menu li:hover::after {
   width: 100%;
+}
+header .header #btn-mobile {
+  background: none;
+  display: none;
+}
+header .header #btn-mobile::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  display: block;
+  background: url("./assets/icons/menu-hamburguer.svg") no-repeat center;
 }
 
 @media (max-width: 983px) {

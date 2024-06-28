@@ -3,16 +3,12 @@ header {
   width: 100%;
 
   & .header {
-    & #btn-mobile {
-      background: none;
-      display: none;
-
-      &::after {
-        content: "";
-        height: 30px;
-        width: 30px;
-        display: block;
-        background: url("./assets/icons/menu-hamburguer.svg") no-repeat center;
+    & > h2 a {
+      &:hover {
+        & span {
+          transition: 0.3s ease-in-out;
+          color: #fff;
+        }
       }
     }
 
@@ -34,6 +30,19 @@ header {
         &:hover::after {
           width: 100%;
         }
+      }
+    }
+
+    & #btn-mobile {
+      background: none;
+      display: none;
+
+      &::after {
+        content: "";
+        height: 30px;
+        width: 30px;
+        display: block;
+        background: url("./assets/icons/menu-hamburguer.svg") no-repeat center;
       }
     }
   }
