@@ -116,10 +116,10 @@ main .introducao .introducao-icones {
 }
 @keyframes write {
   20% {
-    width: 21.5ch;
+    width: 21.8ch;
   }
   70% {
-    width: 21.5ch;
+    width: 21.8ch;
   }
   85% {
     width: 0;
@@ -317,6 +317,7 @@ main .introducao .introducao-icones {
 }
 
 .sub-titulo {
+  z-index: -1;
   font-size: 1.87rem;
   font-weight: 600;
   color: var(--primary-color-c9);
