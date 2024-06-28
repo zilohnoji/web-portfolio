@@ -39,7 +39,7 @@ header {
   }
 }
 
-@media (max-width: 875px) {
+@media (max-width: 983px) {
   header {
     & .header {
       & #header-container-nav {
@@ -64,7 +64,6 @@ header {
           right: 0;
           top: 100px;
           background-color: var(--primary-color-c13);
-          // z-index: 10;
 
           & li {
             padding: 1.5rem 2rem;

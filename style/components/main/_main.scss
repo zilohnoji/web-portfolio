@@ -24,3 +24,13 @@ main {
     }
   }
 }
+
+@media (max-width: 356px) {
+  main {
+    & .introducao {
+      & > h1 {
+        font-size: 2.7rem;
+      }
+    }
+  }
+}
