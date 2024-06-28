@@ -1,7 +1,24 @@
 #sobre-mim {
+  height: 100vh;
   & .sobre-mim-conteudo {
     grid-template-columns: 2fr 1fr;
     padding: 6rem 0rem;
+
+    & .container-dados-servicos {
+      position: relative;
+      &::after {
+        z-index: -1;
+        right: 0px;
+        bottom: -12.5rem;
+        position: absolute;
+        content: "";
+        width: 35rem;
+        height: 35rem;
+        display: inline-block;
+        background: url("/assets/icons/java-background-icon.svg") no-repeat
+          center;
+      }
+    }
 
     & .container-sobre-mim-card {
       margin-top: 2rem;
@@ -52,6 +69,10 @@
         gap: 10rem;
         display: flex;
         flex-direction: row;
+
+        &::after {
+          top: -25rem;
+        }
       }
 
       & .container-sobre-mim-card {
@@ -66,12 +87,17 @@
     & .sobre-mim-conteudo {
       justify-items: left;
 
-      & div > p {
-        font-size: 20px;
-      }
       & .container-dados-servicos {
         gap: 3rem;
+      }
+    }
+  }
+}
 
+@media (max-width: 691px) {
+  #sobre-mim {
+    & .sobre-mim-conteudo {
+      & .container-dados-servicos {
         & span {
           font-size: 1rem;
         }
@@ -83,8 +109,20 @@
 @media (max-width: 574px) {
   #sobre-mim {
     & .sobre-mim-conteudo {
+      & p {
+        font-size: 20px;
+      }
+      
       & .container-dados-servicos {
         flex-direction: column;
+
+        & span {
+          font-size: 1rem;
+        }
+
+        &::after {
+          display: none;
+        }
 
         & .dados {
           & span {
