@@ -1,13 +1,12 @@
 #sobre-mim {
-  height: 100vh;
   & .sobre-mim-conteudo {
     grid-template-columns: 2fr 1fr;
     padding: 6rem 0rem;
 
     & .container-dados-servicos {
       position: relative;
+      z-index: 1;
       &::after {
-        z-index: -1;
         right: 0px;
         bottom: -12.5rem;
         position: absolute;
@@ -109,10 +108,11 @@
 @media (max-width: 574px) {
   #sobre-mim {
     & .sobre-mim-conteudo {
+      padding: 3rem 0rem;
       & p {
         font-size: 20px;
       }
-      
+
       & .container-dados-servicos {
         flex-direction: column;
 

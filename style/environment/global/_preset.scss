@@ -101,6 +101,10 @@
   align-items: center;
 }
 
+.bg-container {
+  background-color: #141313;
+}
+
 .gap-10-px {
   gap: 0.62rem;
 }
@@ -131,6 +135,10 @@
 
 .primary-color-c0 {
   color: var(--primary-color-c0);
+}
+
+.content-data {
+  color: #b8b8b8;
 }
 
 .primary-color-c4 {
@@ -179,10 +187,11 @@
   font-size: 5rem;
 
   &::after {
+    margin-top: 5px;
     content: "";
     display: block;
     width: 100%;
-    height: 3px;
+    height: 5px;
     border-radius: 3px;
     background: var(--linear-gradient-yellow);
   }

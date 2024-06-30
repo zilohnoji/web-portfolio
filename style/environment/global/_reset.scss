@@ -7,16 +7,8 @@
 
 body {
   position: relative;
-
-  &:nth-child(odd){
-    background-color: var(--primary-color-c12);
-  }
-
-  &:nth-child(even){
-    background-color: var(--primary-color-c13);
-  }
+  background-color: #141414;
 }
-
 
 :root {
   --font-roboto: "Roboto";

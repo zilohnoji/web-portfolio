@@ -4,13 +4,11 @@
 header {
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 header .header > h2 a:hover span {
   transition: 0.3s ease-in-out;
   color: #fff;
-}
-header .header .header-menu {
-  z-index: 2;
 }
 header .header .header-menu li {
   position: relative;
@@ -128,18 +126,15 @@ main .introducao .introducao-icones {
     width: 0;
   }
 }
-#sobre-mim {
-  height: 100vh;
-}
 #sobre-mim .sobre-mim-conteudo {
   grid-template-columns: 2fr 1fr;
   padding: 6rem 0rem;
 }
 #sobre-mim .sobre-mim-conteudo .container-dados-servicos {
   position: relative;
+  z-index: 1;
 }
 #sobre-mim .sobre-mim-conteudo .container-dados-servicos::after {
-  z-index: -1;
   right: 0px;
   bottom: -12.5rem;
   position: absolute;
@@ -212,6 +207,9 @@ main .introducao .introducao-icones {
   }
 }
 @media (max-width: 574px) {
+  #sobre-mim .sobre-mim-conteudo {
+    padding: 3rem 0rem;
+  }
   #sobre-mim .sobre-mim-conteudo p {
     font-size: 20px;
   }
@@ -233,6 +231,169 @@ main .introducao .introducao-icones {
 }
 @media (max-width: 550px) {
   #sobre-mim .title {
+    font-size: 3.5rem;
+  }
+}
+.projetos .title {
+  margin-top: 1.31rem;
+}
+.projetos #tab-menu {
+  margin-top: 3rem;
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 2.81rem;
+  grid-template-columns: auto 2fr;
+}
+.projetos #tab-menu .tab-contents .content {
+  gap: 5rem;
+  display: none;
+  grid-template-columns: auto 1fr;
+}
+.projetos #tab-menu .tab-contents .content.show {
+  display: grid;
+}
+.projetos #tab-menu .tab-contents .content .content-stack {
+  max-height: 15em;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.projetos #tab-menu .tab-contents .content .content-stack > span {
+  color: #b8b8b8;
+  font-family: "Poppins";
+}
+.projetos #tab-menu .tab-contents .content .content-stack > div {
+  max-height: 100%;
+  overflow: auto;
+}
+.projetos #tab-menu .tab-contents .content .content-stack > div::-webkit-scrollbar {
+  width: 8px;
+}
+.projetos #tab-menu .tab-contents .content .content-stack > div::-webkit-scrollbar-track {
+  background-color: #0d0d0d;
+}
+.projetos #tab-menu .tab-contents .content .content-stack > div::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #141313;
+  border: 1px solid #525252;
+}
+.projetos #tab-menu .tab-contents .content .content-stack > div div {
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f44336;
+  background-color: rgba(122, 17, 17, 0.2);
+}
+.projetos #tab-menu .tab-contents .content .content-stack > div div .stack-btn {
+  font-family: "Poppins";
+  background: var(--Gradient-Enfase-Vermelho, linear-gradient(180deg, #f44336 0%, #92170e 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.projetos #tab-menu .tab-contents .content .content-info {
+  gap: 1rem;
+  display: grid;
+  justify-items: flex-start;
+}
+.projetos #tab-menu .tab-contents .content .content-info > p {
+  max-width: 50ch;
+  text-align: left;
+}
+.projetos #tab-menu .tab-contents .content .content-info .content-info-btn {
+  gap: 1rem;
+  display: flex;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  justify-content: center;
+  color: var(--secondary-color-e11);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, #f44336, #e23023);
+}
+.projetos #tab-menu .tab-buttons {
+  height: 20rem;
+  width: 15rem;
+  display: grid;
+  overflow: auto;
+}
+.projetos #tab-menu .tab-buttons::-webkit-scrollbar {
+  width: 8px;
+}
+.projetos #tab-menu .tab-buttons::-webkit-scrollbar-track {
+  background-color: #0d0d0d;
+}
+.projetos #tab-menu .tab-buttons::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #141313;
+  border: 1px solid #525252;
+}
+.projetos #tab-menu .tab-buttons .tab-btn {
+  height: 5rem;
+  font-size: 20px;
+  font-family: "Poppins";
+  color: var(--primary-color-c10);
+  background-color: #0d0d0d;
+  position: relative;
+  text-align: start;
+  padding-left: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+.projetos #tab-menu .tab-buttons .tab-btn.tab-active {
+  color: var(--secondary-color-e7);
+}
+.projetos #tab-menu .tab-buttons .tab-btn::before {
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  height: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, var(--secondary-color-e8), var(--secondary-color-e9));
+}
+.projetos #tab-menu .tab-buttons .tab-btn:hover {
+  cursor: pointer;
+  color: var(--secondary-color-e7);
+}
+.projetos #tab-menu .tab-buttons .tab-btn:hover::before {
+  height: 100%;
+}
+
+@media (max-width: 1275px) {
+  .projetos #tab-menu .tab-buttons {
+    height: 15rem;
+    width: 100%;
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 1050px) {
+  .projetos #tab-menu {
+    gap: 1.5rem 0rem;
+  }
+  .projetos #tab-menu .tab-contents .content {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  .projetos #tab-menu .tab-contents .content .content-info > p {
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+  .projetos #tab-menu .tab-contents .content .content-stack {
+    max-width: 100%;
+    overflow: scroll;
+  }
+  .projetos #tab-menu .tab-contents .content .content-stack > div {
+    flex-wrap: nowrap;
+  }
+  .projetos #tab-menu .tab-contents .content .content-stack > div div {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 550px) {
+  .projetos > div > div .title {
     font-size: 3.5rem;
   }
 }
@@ -340,6 +501,10 @@ main .introducao .introducao-icones {
   align-items: center;
 }
 
+.bg-container {
+  background-color: #141313;
+}
+
 .gap-10-px {
   gap: 0.62rem;
 }
@@ -370,6 +535,10 @@ main .introducao .introducao-icones {
 
 .primary-color-c0 {
   color: var(--primary-color-c0);
+}
+
+.content-data {
+  color: #b8b8b8;
 }
 
 .primary-color-c4 {
@@ -419,10 +588,11 @@ main .introducao .introducao-icones {
 }
 
 .title::after {
+  margin-top: 5px;
   content: "";
   display: block;
   width: 100%;
-  height: 3px;
+  height: 5px;
   border-radius: 3px;
   background: var(--linear-gradient-yellow);
 }
@@ -478,14 +648,7 @@ main .introducao .introducao-icones {
 
 body {
   position: relative;
-}
-
-body:nth-child(odd) {
-  background-color: var(--primary-color-c12);
-}
-
-body:nth-child(even) {
-  background-color: var(--primary-color-c13);
+  background-color: #141414;
 }
 
 :root {
