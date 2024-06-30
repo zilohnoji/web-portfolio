@@ -3,6 +3,15 @@ const button = document.querySelector("#btn-mobile");
 
 button.addEventListener("click", () => {
   document.querySelector("#header-container-nav").classList.toggle("active");
+  const lis = document.querySelectorAll("#nav-button li");
+
+  lis.forEach((li) => {
+    li.addEventListener("click", () => {
+      document
+        .querySelector("#header-container-nav")
+        .classList.remove("active");
+    });
+  });
 });
 
 // Menu Tab
@@ -22,3 +31,13 @@ const tabClicked = (tab) => {
 
   content.classList.add("show");
 };
+
+// Header
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});

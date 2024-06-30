@@ -6,6 +6,10 @@ header {
   width: 100%;
   z-index: 10;
 }
+header.scrolled {
+  transition: 0.3s;
+  background-color: var(--primary-color-c13);
+}
 header .header > h2 a:hover span {
   transition: 0.3s ease-in-out;
   color: #fff;
