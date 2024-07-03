@@ -2,22 +2,20 @@ header {
   position: fixed;
   width: 100%;
   z-index: 10;
-  
+
   &.scrolled {
     transition: 0.3s;
     background-color: var(--primary-color-c13);
   }
 
-  & .header {
-    & > h2 a {
-      &:hover {
-        & span {
-          transition: 0.3s ease-in-out;
-          color: #fff;
-        }
-      }
+  & .home-link {
+    &:hover span {
+      color: #fff;
+      transition: 0.3s ease-in-out;
     }
+  }
 
+  & .header {
     & .header-menu {
       & li {
         position: relative;

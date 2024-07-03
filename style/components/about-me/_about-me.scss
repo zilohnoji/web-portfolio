@@ -1,11 +1,31 @@
-#sobre-mim {
-  & .sobre-mim-conteudo {
+#about-me {
+  & .about-me-content {
     grid-template-columns: 2fr 1fr;
     padding: 6rem 0rem;
 
-    & .container-dados-servicos {
+    & .container-data-services {
       position: relative;
       z-index: 1;
+
+      & .data > span,
+      .services > span {
+        display: flex;
+        position: relative;
+        align-items: center;
+        z-index: 1;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 70%;
+          left: -10px;
+          border-radius: 3px;
+          display: inline-block;
+          background: var(--secondary-color-e8);
+        }
+      }
+
       &::after {
         right: 0px;
         bottom: -12.5rem;
@@ -19,9 +39,10 @@
       }
     }
 
-    & .container-sobre-mim-card {
+    & .container-about-me-card {
       margin-top: 2rem;
-      & .sobre-mim-card {
+
+      & .about-me-card {
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -43,7 +64,7 @@
         max-width: 54ch;
       }
 
-      & > .sub-titulo {
+      & > .sub-title {
         &::after {
           content: "";
           display: block;
@@ -58,12 +79,12 @@
 }
 
 @media (max-width: 1205px) {
-  #sobre-mim {
-    & .sobre-mim-conteudo {
+  #about-me {
+    & .about-me-content {
       gap: 3rem;
       grid-template-columns: 1fr;
 
-      & .container-dados-servicos {
+      & .container-data-services {
         justify-content: left;
         gap: 10rem;
         display: flex;
@@ -74,7 +95,7 @@
         }
       }
 
-      & .container-sobre-mim-card {
+      & .container-about-me-card {
         display: none;
       }
     }
@@ -82,11 +103,11 @@
 }
 
 @media (max-width: 805px) {
-  #sobre-mim {
-    & .sobre-mim-conteudo {
+  #about-me {
+    & .about-me-content {
       justify-items: left;
 
-      & .container-dados-servicos {
+      & .container-data-services {
         gap: 3rem;
       }
     }
@@ -94,9 +115,9 @@
 }
 
 @media (max-width: 691px) {
-  #sobre-mim {
-    & .sobre-mim-conteudo {
-      & .container-dados-servicos {
+  #about-me {
+    & .about-me-content {
+      & .container-data-services {
         & span {
           font-size: 1rem;
         }
@@ -106,14 +127,14 @@
 }
 
 @media (max-width: 574px) {
-  #sobre-mim {
-    & .sobre-mim-conteudo {
+  #about-me {
+    & .about-me-content {
       padding: 3rem 0rem;
       & p {
         font-size: 20px;
       }
 
-      & .container-dados-servicos {
+      & .container-data-services {
         flex-direction: column;
 
         & span {
@@ -124,17 +145,15 @@
           display: none;
         }
 
-        & .dados {
+        & .data {
           & span {
-            &.orange-detail {
-              &::before {
-                display: none;
-              }
+            &::before {
+              display: none;
             }
           }
         }
 
-        & .servicos {
+        & .services {
           display: none;
         }
       }
@@ -143,7 +162,7 @@
 }
 
 @media (max-width: 550px) {
-  #sobre-mim {
+  #about-me {
     & .title {
       font-size: 3.5rem;
     }

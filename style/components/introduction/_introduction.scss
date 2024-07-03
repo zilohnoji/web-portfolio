@@ -1,28 +1,42 @@
 main {
-  padding-top: 9rem;
+  padding-top: 10rem;
   height: 50vh;
-  background: url("/assets/images/apresentacao.png") no-repeat left top;
+  background: url("/assets/images/apresentacao.jpg") no-repeat left top;
   background-size: cover;
 
-  & .introducao {
+  & .introduction {
     & .text-animation {
       width: 0;
       display: block;
       overflow: hidden;
       white-space: nowrap;
       border-right: 2px solid var(--secondary-color-e8);
-      animation: mark 0.8s step-end infinite, write 6s steps(22, end) infinite;
+      animation: mark 0.8s step-end infinite, writer 6s steps(22, end) infinite;
     }
 
-    & .introducao-icones {
+    & .introduction-icons {
       padding: 1.5rem 0rem;
+    }
+
+    & .introduction-buttons {
+      & > a {
+        padding: 0.5rem 1rem;
+      }
+
+      & a + a {
+        padding: 0.5rem 2rem;
+        background: rgb(135, 30, 30, 0.3);
+        &:hover {
+          background: rgb(135, 30, 30, 0.5);
+        }
+      }
     }
   }
 }
 
 @media (max-width: 430px) {
   main {
-    & .introducao {
+    & .introduction {
       & > h1 {
         font-size: 3rem;
       }
@@ -36,7 +50,7 @@ main {
 
 @media (max-width: 356px) {
   main {
-    & .introducao {
+    & .introduction {
       & > h1 {
         font-size: 2.7rem;
       }
@@ -50,7 +64,7 @@ main {
   }
 }
 
-@keyframes write {
+@keyframes writer {
   20% {
     width: 21.8ch;
   }
