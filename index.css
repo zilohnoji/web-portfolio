@@ -548,6 +548,15 @@ main .introduction .introduction-buttons a + a:hover {
     display: none;
   }
 }
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 3rem;
+  color: #8F8F8F;
+  font-weight: 500;
+  background-color: #141313;
+}
+
 :root {
   --primary-color-c0: #ffffff;
   --primary-color-c1: #f5f5f5;
