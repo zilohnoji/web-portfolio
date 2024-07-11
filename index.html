@@ -404,7 +404,7 @@
       </section>
       <section class="form" aria-label="Formulario">
         <h2 class="fs-35-px primary-color-c4 font-poppins">entre em contato</h2>
-        <form action="./index.html">
+        <form action="./index.html" method="post">
           <div class="container-name-email">
             <div>
               <label for="name">Nome</label>
@@ -412,12 +412,12 @@
             </div>
             <div>
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="contato@gmail.com">
+              <input type="email" id="email" name="email" placeholder="contato@gmail.com" required>
             </div>
           </div>
           <div class="container-mensagem">
-            <label for="mensagem">Mensagem</label>
-            <textarea rows="10" id="mensagem" name="mensagem" placeholder="O que você precisa?"></textarea>
+            <label for="message">Mensagem</label>
+            <textarea rows="10" id="message" name="message" placeholder="O que você precisa?" required></textarea>
           </div>
           <button>enviar mensagem</button>
         </form>
